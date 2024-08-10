@@ -68,3 +68,34 @@ li{
     font-size: 1.4rem;
     margin-left: 10px;
 }
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .to-do-list {
+        margin: 20px 5px; /* Further reduce margin */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Further adjust font size */
+    }
+
+    button {
+        font-size: 1.2rem; /* Further adjust button font size */
+        padding: 6px 12px; /* Further adjust button padding */
+    }
+
+    input[type='text'] {
+        font-size: 1.2rem; /* Further adjust font size */
+        padding: 6px; /* Further adjust padding */
+    }
+
+    li {
+        font-size: 1.4rem; /* Further adjust font size */
+        padding: 8px; /* Further adjust padding */
+    }
+
+    .delete-button, .move-button {
+        font-size: 1.2rem; /* Adjust button font size */
+        padding: 6px 10px; /* Adjust button padding */
+    }
+}
