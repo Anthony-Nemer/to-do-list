@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 
 function ToDoList() {
     const [tasks, setTasks] = useState([]);
-    const [newTask, setNewTask] = useState([]);
+    const [newTask, setNewTask] = useState('');
 
     function handleInputChange(event) {
         setNewTask(event.target.value);
     }
 
-    function addTask() {
+    function addTask(event) {
+        event.preventDefault(); // Prevent default form submission behavior
         if (newTask.trim() !== "") {
             setTasks(t => [...t, { text: newTask, completed: false }]);
             setNewTask("");
@@ -48,14 +49,14 @@ function ToDoList() {
     return (
         <div className='to-do-list'>
             <h1>To-Do-List</h1>
-            <form>
+            <form onSubmit={addTask}>
                 <input
                     type='text'
-                    placeholder='Enter a task YA BAYB...'
+                    placeholder='Enter a task my scientist...'
                     value={newTask}
                     onChange={handleInputChange}
                 />
-                <button className='add-button' onClick={addTask}>
+                <button type="submit" className='add-button'>
                     Add
                 </button>
             </form>
