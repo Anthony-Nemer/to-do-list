@@ -51,7 +51,7 @@ function ToDoList() {
             <form>
                 <input
                     type='text'
-                    placeholder='Enter a task...'
+                    placeholder='Enter a task YA BAYB...'
                     value={newTask}
                     onChange={handleInputChange}
                 />
