@@ -48,7 +48,7 @@ function ToDoList() {
     return (
         <div className='to-do-list'>
             <h1>To-Do-List</h1>
-            <div>
+            <form>
                 <input
                     type='text'
                     placeholder='Enter a task...'
@@ -58,7 +58,7 @@ function ToDoList() {
                 <button className='add-button' onClick={addTask}>
                     Add
                 </button>
-            </div>
+            </form>
             <ol>
                 {tasks.map((task, index) => (
                     <li key={index} style={{ backgroundColor: task.completed ? 'darkgrey' : 'white' }}>
